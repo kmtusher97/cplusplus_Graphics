@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdlib.h>
-#include <functional>
 #include <graphics.h>
 using namespace std;
 
@@ -17,8 +16,11 @@ void draw_circle( pair<int, int> center, int radius )
     return;
   }
 
+  setcolor(3);   // 3 = cyan, 2 = green so on
   circle( center.first, center.second, radius );
+
   getch();   // wait
+
   closegraph();
 }
 
@@ -28,3 +30,5 @@ int main()
 
   return 0;
 }
+
+// https://www.cs.colorado.edu/~main/bgi/doc/circle.html
